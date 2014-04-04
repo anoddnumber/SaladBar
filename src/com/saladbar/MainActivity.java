@@ -61,5 +61,9 @@ public class MainActivity extends ActionBarActivity {
             return rootView;
         }
     }
+    
+    public void clickItem(View view) {
+    	System.out.println("click!");
+    }
 
 }
