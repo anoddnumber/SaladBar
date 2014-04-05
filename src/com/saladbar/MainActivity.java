@@ -9,10 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
-
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +26,7 @@ public class MainActivity extends ActionBarActivity {
                     .commit();
         }
     }
-
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -50,15 +51,35 @@ public class MainActivity extends ActionBarActivity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-
+    	public final static int BUTTON_WIDTH = 300;//in pixels
+    	public final static int BUTTON_HEIGHT = 200;//in pixels
+    	
         public PlaceholderFragment() {
         }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
+        	System.out.println("ON CREATE VIEWWWWWWWW");
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            resizeImageButtons(rootView);
             return rootView;
+        }
+        
+        private void resizeImageButtons(View rootView) {
+        	LinearLayout imageButtonsLayout = (LinearLayout) rootView.findViewById(R.id.imageButtonsLayout);
+        	int numChilds = imageButtonsLayout.getChildCount();
+        	
+        	for (int i = 0; i < numChilds; i++) {
+        		View child = imageButtonsLayout.getChildAt(i);
+        		System.out.println("i: " + i);
+        		if (child instanceof ImageButton) {
+        			ImageButton imgBtn = (ImageButton) child;
+        			imgBtn.getLayoutParams().width = BUTTON_WIDTH;
+        			imgBtn.getLayoutParams().height = BUTTON_HEIGHT;
+        		}
+        	}
+        	
         }
     }
     
