@@ -1,35 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageButtonsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:baselineAligned="false"
-    android:id = "@+id/mainPageLayout"
-    android:minHeight="500dp"
-    android:minWidth="500dp"
-     >
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal" >
-        
-        <!-- TODO Add pentagons -->
-    </LinearLayout>
-
-        <fragment android:name="com.saladbar.ButtonsFragment"
-              android:id="@+id/buttons_fragment"
-              android:layout_weight="2"
-              android:layout_width="0dp"
-              android:layout_height="match_parent" />
-        
-<!--      <LinearLayout
-        android:id="@+id/imageButtonsLayout"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:orientation="horizontal" >
+    android:orientation="horizontal" >
 
         <ImageButton
             android:id="@+id/broccoli"
@@ -62,6 +36,5 @@
             android:layout_height="wrap_content"
             android:onClick="clickItem"
             android:src="@drawable/broccoli" />
-    </LinearLayout>
--->
+
 </LinearLayout>

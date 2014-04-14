@@ -60,7 +60,6 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-        	System.out.println("ON CREATE VIEWWWWWWWW");
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             resizeImageButtons(rootView);
             return rootView;
@@ -72,7 +71,6 @@ public class MainActivity extends ActionBarActivity {
         	
         	for (int i = 0; i < numChilds; i++) {
         		View child = imageButtonsLayout.getChildAt(i);
-        		System.out.println("i: " + i);
         		if (child instanceof ImageButton) {
         			ImageButton imgBtn = (ImageButton) child;
         			imgBtn.getLayoutParams().width = BUTTON_WIDTH;
