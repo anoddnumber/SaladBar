@@ -59,22 +59,30 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            resizeImageButtons(rootView);
+        		Bundle savedInstanceState) {
+        	View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        	if (rootView instanceof ViewGroup) {
+        		resizeImageButtons( (ViewGroup) rootView);
+        	}
+
             return rootView;
         }
         
-        private void resizeImageButtons(View rootView) {
-        	LinearLayout imageButtonsLayout = (LinearLayout) rootView.findViewById(R.id.imageButtonsLayout);
-        	int numChilds = imageButtonsLayout.getChildCount();
+        private void resizeImageButtons(ViewGroup rootView) {
+        	if (rootView == null) {
+        		return;
+        	}
+        	
+        	int numChilds = rootView.getChildCount();
         	
         	for (int i = 0; i < numChilds; i++) {
-        		View child = imageButtonsLayout.getChildAt(i);
+        		View child = rootView.getChildAt(i);
         		if (child instanceof ImageButton) {
         			ImageButton imgBtn = (ImageButton) child;
         			imgBtn.getLayoutParams().width = BUTTON_WIDTH;
         			imgBtn.getLayoutParams().height = BUTTON_HEIGHT;
+        		} else if (child instanceof ViewGroup) {
+        			resizeImageButtons( (ViewGroup) child);
         		}
         	}
         	

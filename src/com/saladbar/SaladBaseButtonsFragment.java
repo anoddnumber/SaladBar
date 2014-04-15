@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ButtonsFragment extends Fragment {
+public class SaladBaseButtonsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.buttons, container, false);
+        return inflater.inflate(R.layout.salad_base_buttons, container, false);
     }
 }
