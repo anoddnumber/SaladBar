@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/imageButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/broccoli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/broccoli" />
+
+        <ImageButton
+            android:id="@+id/lettuce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/carrot" />
+
+        <ImageButton
+            android:id="@+id/spinach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/lettuce" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/imageButtonDesc"
+            android:onClick="clickItem"
+            android:src="@drawable/mixedgreens" />
+        
+    </LinearLayout>
+
+</HorizontalScrollView>
